@@ -1,7 +1,10 @@
-.button {
-    background: #F5C7F7;
+@import "../../styles/colors";
+
+.Button {
+    background: $color-pink;
+    color: $color-black;
     display: block;
-    padding: .5rem 1rem;
+    padding: .75rem 1.25rem;
     border-radius: 20px;
     font-weight: 500;
     cursor: pointer;
