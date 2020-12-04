@@ -1,0 +1,23 @@
+@import "../../../styles/typography";
+
+.Title {
+    font-weight: $font-bold;
+
+    @at-root {
+        h1#{&} {
+            font-size: $title-level-one;
+        }
+
+        h2#{&} {
+            font-size: $title-level-two;
+        }
+
+        h3#{&} {
+            font-size: $title-level-three;
+        }
+
+        h4#{&} {
+            font-size: $title-level-four;
+        }
+    }
+}
