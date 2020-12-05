@@ -3,7 +3,7 @@ import styles from './Button.module.scss';
 import classNames from 'classnames';
 
 // Custom components
-import Arrow from '../Arrow/Arrow';
+import Arrow from '../Icons/Arrow/Arrow';
 
 interface Props extends ComponentProps<any> {
     style?: string;
