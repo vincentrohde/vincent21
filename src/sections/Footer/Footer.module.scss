@@ -1,0 +1,10 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/variables";
+
+.Footer {
+    background: $color-purple-dark;
+    color: $color-gray;
+    margin: 0 (-1 * $mobile-padding);
+    padding: (.75 * $mobile-padding) $mobile-padding;
+}
