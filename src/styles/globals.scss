@@ -1,5 +1,6 @@
 @import "fonts";
 @import "colors";
+@import "variables";
 
 * {
     box-sizing: border-box;
@@ -22,4 +23,5 @@ a {
 .app {
     max-width: 50rem;
     margin: 0 auto;
+    padding: 3.5rem $mobile-padding 0;
 }
