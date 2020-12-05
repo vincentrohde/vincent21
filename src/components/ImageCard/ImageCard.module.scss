@@ -1,0 +1,55 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+
+$image-card-height: 30vh;
+
+.ImageCard {
+    position: relative;
+    color: $color-white;
+    height: $image-card-height;
+    overflow: hidden;
+    border-radius: 15px;
+
+    &.isWhite {
+        color: $color-black;
+
+        .imageContainer {
+            &:before {
+                background: rgba(255,255,255, 0.5);
+                background: $image-gradient-white;
+            }
+        }
+    }
+
+    .imageTitle {
+        top: 1rem;
+        left: 1rem;
+        position: absolute;
+        z-index: 2;
+        font-size: $title-level-one;
+        line-height: 1;
+    }
+
+    .imageContainer {
+        position: relative;
+
+        &:before {
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0,0,0, 0.5);
+            background: $image-gradient-black;
+            z-index: 1;
+        }
+
+        img {
+            max-width: 100%;
+            height: $image-card-height;
+            object-position: 50% 50%;
+            object-fit: contain;
+        }
+    }
+}
