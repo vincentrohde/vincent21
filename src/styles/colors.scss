@@ -7,3 +7,8 @@ $color-purple-light: #A393EB;
 $color-purple: #3F438D;
 $color-purple-dark: #2C2F5D;
 $color-black: #000000;
+
+// Gradients
+
+$image-gradient-black: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(94,99,182,0.5) 100%);
+$image-gradient-white: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,199,247,0.5) 100%);
