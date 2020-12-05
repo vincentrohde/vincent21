@@ -1,11 +1,44 @@
 @import "../../styles/colors";
 
+:export {
+    colorPink: $color-pink;
+    colorBlack: $color-black;
+    colorWhite: $color-white;
+}
+
 .Button {
     background: $color-pink;
     color: $color-black;
     display: block;
     padding: .75rem 1.25rem;
-    border-radius: 20px;
+    border-radius: 30px;
     font-weight: 500;
     cursor: pointer;
+
+    &:hover, &.black, &.white:hover {
+        background: $color-black;
+        color: $color-white;
+
+        .arrowContainer path {
+            stroke: $color-white;
+        }
+    }
+
+    &.white, &.black:hover {
+        background: $color-white;
+        color: $color-black;
+
+        .arrowContainer path {
+            stroke: $color-black;
+        }
+    }
+
+    .arrowContainer {
+        margin-left: 1rem;
+        display: inline-block;
+
+        path {
+            stroke: $color-black;
+        }
+    }
 }

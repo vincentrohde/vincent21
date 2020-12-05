@@ -1,8 +1,39 @@
 import React, {ComponentProps} from 'react';
 import styles from './Button.module.scss';
+import classNames from 'classnames';
 
-const Button = ({children}: ComponentProps<any>) => {
-    return <a className={styles.Button}>{children && children}</a>;
+// Custom components
+import Arrow from '../Arrow/Arrow';
+
+interface Props extends ComponentProps<any> {
+    style?: string;
+    isLink?: boolean;
+}
+
+const Button = ({isLink = true, style = 'pink', children}: Props) => {
+    let theme = '';
+
+    switch (style) {
+        case 'black':
+            theme = styles.black;
+            break;
+        case 'white':
+            theme = styles.white;
+            break;
+        default:
+            break;
+    }
+
+    return (
+        <a className={classNames(styles.Button, theme)}>
+            {children && children}
+            {isLink && (
+                <div className={styles.arrowContainer}>
+                    <Arrow stroke={''} />
+                </div>
+            )}
+        </a>
+    );
 };
 
 export default Button;
