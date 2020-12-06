@@ -46,10 +46,10 @@ $image-card-height: 30vh;
         }
 
         img {
-            max-width: 100%;
+            width: 100%;
             height: $image-card-height;
             object-position: 50% 50%;
-            object-fit: contain;
+            object-fit: cover;
         }
     }
 }
