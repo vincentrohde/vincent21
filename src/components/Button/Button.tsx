@@ -11,7 +11,7 @@ interface Props extends ComponentProps<any> {
     isLink?: boolean;
 }
 
-const Button = ({isLink = true, style = 'pink', children}: Props) => {
+const Button = ({isLink = true, style = 'pink', className, children}: Props) => {
     let theme = '';
 
     switch (style) {
@@ -26,7 +26,7 @@ const Button = ({isLink = true, style = 'pink', children}: Props) => {
     }
 
     return (
-        <a className={classNames(styles.Button, theme)}>
+        <a className={classNames(styles.Button, theme, className)}>
             {children && <Text>{children}</Text>}
             {isLink && (
                 <div className={styles.arrowContainer}>
