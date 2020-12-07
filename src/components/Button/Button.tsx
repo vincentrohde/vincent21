@@ -7,13 +7,31 @@ import Arrow from '../Icons/Arrow/Arrow';
 import Text from '../Typography/Text/Text';
 
 interface Props extends ComponentProps<any> {
-    icon?: string;
     style?: string;
+    href?: string;
+    icon?: string;
     isLink?: boolean;
+    clickHandler?: () => void;
 }
 
-const Button = ({isLink = true, style = 'pink', className, icon, children}: Props) => {
+const Button = ({
+    style = 'pink',
+    href,
+    icon,
+    isLink = true,
+    clickHandler,
+    className,
+    children,
+}: Props) => {
     let theme = '';
+
+    const isSyntheticLink = typeof clickHandler !== 'undefined';
+
+    const onClick = (event: React.MouseEvent) => {
+        if (typeof clickHandler === 'undefined') return;
+        event.preventDefault();
+        clickHandler();
+    };
 
     switch (style) {
         case 'black':
@@ -27,7 +45,11 @@ const Button = ({isLink = true, style = 'pink', className, icon, children}: Prop
     }
 
     return (
-        <a className={classNames(styles.Button, theme, className)}>
+        <a
+            className={classNames(styles.Button, theme, className)}
+            href={href ? href : undefined}
+            onClick={isSyntheticLink ? onClick : undefined}
+        >
             {icon && (
                 <div className={styles.iconContainer}>
                     <img src={icon} alt={''} />
