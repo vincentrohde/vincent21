@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
+
+// Custom components
 import Title from '../../components/Typography/Title/Title';
 
 const Footer = () => {

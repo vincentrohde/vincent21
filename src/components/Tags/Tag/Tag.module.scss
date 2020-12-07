@@ -11,4 +11,8 @@ $tag-margin: 1.5%;
     justify-content: space-around;
     margin: $tag-margin;
     padding: .3rem .5rem;
+
+    p {
+        line-height: 1.5;
+    }
 }

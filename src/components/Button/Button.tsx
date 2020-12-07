@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 // Custom components
 import Arrow from '../Icons/Arrow/Arrow';
+import Text from '../Typography/Text/Text';
 
 interface Props extends ComponentProps<any> {
     style?: string;
@@ -26,7 +27,7 @@ const Button = ({isLink = true, style = 'pink', children}: Props) => {
 
     return (
         <a className={classNames(styles.Button, theme)}>
-            {children && children}
+            {children && <Text>{children}</Text>}
             {isLink && (
                 <div className={styles.arrowContainer}>
                     <Arrow stroke={''} />
