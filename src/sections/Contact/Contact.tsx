@@ -37,10 +37,10 @@ const Contact = () => {
                     Socials
                 </Title>
                 <div className={styles.socialButtonContainer}>
-                    <Button className={styles.socialButton} style={'pink'}>
+                    <Button icon={'/logos/github.svg'} className={styles.socialButton}>
                         Github
                     </Button>
-                    <Button className={styles.socialButton} style={'pink'}>
+                    <Button icon={'/logos/twitter.svg'} className={styles.socialButton}>
                         Twitter
                     </Button>
                 </div>
