@@ -1,4 +1,4 @@
-import React, {ComponentProps, ReactNode} from 'react';
+import React, {ComponentProps} from 'react';
 import styles from './Button.module.scss';
 import classNames from 'classnames';
 
