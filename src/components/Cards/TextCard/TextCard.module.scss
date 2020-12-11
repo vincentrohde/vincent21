@@ -1,0 +1,19 @@
+@import "../../../styles/colors";
+
+.TextCard {
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+
+    &.isDark {
+        background: $color-purple-dark;
+        color: $color-white;
+    }
+
+    &.isLight {
+        background: $color-white;
+        color: $color-black;
+    }
+}
