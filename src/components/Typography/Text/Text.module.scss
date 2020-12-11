@@ -1,6 +1,8 @@
 @import "../../../styles/typography";
 @import "../../../styles/colors";
 
+$text-line-height: 1.75rem;
+
 .Text {
     font-size: $text-mobile;
     line-height: 1.75rem;

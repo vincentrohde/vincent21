@@ -24,7 +24,6 @@ const Button = ({
     children,
 }: Props) => {
     let theme = '';
-
     const isSyntheticLink = typeof clickHandler !== 'undefined';
 
     const onClick = (event: React.MouseEvent) => {

@@ -5,6 +5,9 @@
         list-style: none;
 
         li {
+            display: flex;
+            margin-left: unset;
+
             &:before {
                 content: "-";
                 margin-right: 1rem;
@@ -14,6 +17,6 @@
     }
 
     li {
-        display: flex;
+        margin-left: 2rem;
     }
 }
