@@ -1,0 +1,23 @@
+.About {
+    margin-bottom: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 0 40vw;
+
+    .title {
+        margin-bottom: 3rem;
+    }
+
+    .text {
+        margin-bottom: 2rem;
+    }
+
+    .imageContainer {
+        height: 40vw;
+        width: 40vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
