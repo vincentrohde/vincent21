@@ -1,15 +1,19 @@
 @import "../Text/Text.module";
 
 .List {
-    list-style: none;
+    &.isHyphens {
+        list-style: none;
+
+        li {
+            &:before {
+                content: "-";
+                margin-right: 1rem;
+                line-height: $text-line-height;
+            }
+        }
+    }
 
     li {
         display: flex;
-
-        &:before {
-            content: "-";
-            margin-right: 1rem;
-            line-height: $text-line-height;
-        }
     }
 }
