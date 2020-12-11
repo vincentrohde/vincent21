@@ -1,0 +1,36 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+
+:export { logoColor: $color-purple-light; }
+
+.Welcome {
+    display: flex;
+    flex-wrap: wrap;
+
+    .label {
+        color: $color-pink;
+        font-weight: $font-bold;
+        font-size: 1.25rem;
+        flex: 0 0 100%;
+    }
+
+    .textContainer {
+        margin-top: 2rem;
+        flex: 0 0 100%;
+
+        .introText {
+            width: 80%;
+        }
+    }
+
+    .buttonContainer {
+        margin-top: 4rem;
+    }
+
+    .logoContainer {
+        width: 10vw;
+        margin: 0 auto;
+        flex: 0 0 100%;
+        padding: 18vh 32vw;
+    }
+}
