@@ -1,0 +1,15 @@
+@import "../Text/Text.module";
+
+.List {
+    list-style: none;
+
+    li {
+        display: flex;
+
+        &:before {
+            content: "-";
+            margin-right: 1rem;
+            line-height: $text-line-height;
+        }
+    }
+}
