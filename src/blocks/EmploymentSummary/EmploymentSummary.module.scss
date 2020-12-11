@@ -1,0 +1,26 @@
+@import "../../styles/colors";
+
+.EmploymentSummary {
+    .contentContainer {
+        margin-bottom: 1.5rem;
+
+        .companyTitle {
+            margin: .5rem 0;
+        }
+
+        .jobTitle {
+            color: $color-gray-dark;
+            margin-bottom: .5rem;
+        }
+
+        .subtitle {
+            margin-bottom: .5rem;
+        }
+
+        .jobSummary {
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
