@@ -1,0 +1,20 @@
+@import "../../../../styles/colors";
+
+.CardNavigationItem {
+    background: $color-purple-light;
+    color: $color-purple;
+    display: inline-block;
+    padding: .75rem 1rem;
+    margin-right: 1rem;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+
+    &:last-of-type {
+        margin-right: unset;
+    }
+
+    &.isActive, &:hover {
+        background: $color-pink;
+        color: $color-purple;
+    }
+}
