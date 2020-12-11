@@ -5,12 +5,14 @@ import classNames from 'classnames';
 // Custom components
 import Arrow from '../Icons/Arrow/Arrow';
 import Text from '../Typography/Text/Text';
+import Title from '../Typography/Title/Title';
 
 interface Props extends ComponentProps<any> {
     style?: string;
     href?: string;
     icon?: string;
     isLink?: boolean;
+    isGhost?: boolean;
     clickHandler?: () => void;
 }
 
@@ -19,6 +21,7 @@ const Button = ({
     href,
     icon,
     isLink = true,
+    isGhost = false,
     clickHandler,
     className,
     children,
@@ -45,7 +48,7 @@ const Button = ({
 
     return (
         <a
-            className={classNames(styles.Button, theme, className)}
+            className={classNames(styles.Button, theme, {[styles.isGhost]: isGhost}, className)}
             href={href ? href : undefined}
             onClick={isSyntheticLink ? onClick : undefined}
         >
@@ -54,7 +57,7 @@ const Button = ({
                     <img src={icon} alt={''} />
                 </div>
             )}
-            {children && <Text>{children}</Text>}
+            {children && isGhost ? <Title level={4}>{children}</Title> : <Text>{children}</Text>}
             {isLink && (
                 <div className={styles.arrowContainer}>
                     <Arrow stroke={''} />

@@ -41,6 +41,42 @@
         }
     }
 
+    &.isGhost {
+        background: unset;
+
+        &:hover {
+            color: $color-white;
+
+            .arrowContainer path {
+                stroke: $color-white;
+            }
+        }
+
+        &.black {
+            .arrowContainer path {
+                stroke: $color-black;
+            }
+        }
+
+        &.white {
+            .arrowContainer path {
+                stroke: $color-white;
+            }
+        }
+
+        .iconContainer img {
+            filter: unset;
+        }
+
+        .arrowContainer svg {
+            height: 100%;
+        }
+
+        .arrowContainer path {
+            stroke: $color-pink;
+        }
+    }
+
     p {
         display: inline;
         line-height: unset;
