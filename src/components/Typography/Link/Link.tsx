@@ -5,12 +5,17 @@ import styles from './Link.module.scss';
 // Components
 import Button from '../../Button/Button';
 
-const Link = ({className, children}: ComponentProps<any>) => (
+interface Props extends ComponentProps<any> {
+    color?: string;
+}
+
+const Link = ({color = 'pink', className, children}: Props) => (
     <Button
         className={classnames(styles.Link, className)}
-        style={'pink'}
+        style={color}
         isGhost={true}
         isLink={true}
+        isShadow={false}
     >
         {children}
     </Button>

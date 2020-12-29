@@ -22,6 +22,7 @@ const Button = ({
     icon,
     isLink = true,
     isGhost = false,
+    isShadow = true,
     clickHandler,
     className,
     children,
@@ -48,13 +49,9 @@ const Button = ({
 
     return (
         <a
-            className={classNames(
-                styles.Button,
-                theme,
-                {[styles.isGhost]: isGhost},
-                className,
-                'shadow',
-            )}
+            className={classNames(styles.Button, theme, {[styles.isGhost]: isGhost}, className, {
+                ['shadow']: isShadow,
+            })}
             href={href ? href : undefined}
             onClick={isSyntheticLink ? onClick : undefined}
         >

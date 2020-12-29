@@ -52,13 +52,23 @@
             }
         }
 
+        &.black, &.white {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         &.black {
+            color: $color-black;
+
             .arrowContainer path {
                 stroke: $color-black;
             }
         }
 
         &.white {
+            color: $color-white;
+
             .arrowContainer path {
                 stroke: $color-white;
             }
