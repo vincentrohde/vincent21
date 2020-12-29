@@ -7,30 +7,36 @@
     display: flex;
     flex-wrap: wrap;
 
-    .label {
-        color: $color-pink;
-        font-weight: $font-bold;
-        font-size: 1.25rem;
-        flex: 0 0 100%;
+    .logoContainer {
+        width: 15vw;
+        margin: 0 auto 2em;
+        flex: 0 0 15vw;
     }
 
-    .textContainer {
-        margin-top: 2rem;
-        flex: 0 0 100%;
+    .heading {
+        color: $color-purple-light;
+        font-size: $title-level-two;
+        line-height: 1.5;
 
-        .introText {
-            width: 80%;
+        .isPink, .isWhite {
+            display: inline-block;
+        }
+
+        .isPink {
+            color: $color-pink;
+        }
+
+        .isWhite {
+            color: $color-white;
+            display: inline-block;
+        }
+
+        .isMobileOnly {
+            display: block;
         }
     }
 
     .buttonContainer {
-        margin-top: 4rem;
-    }
-
-    .logoContainer {
-        width: 10vw;
-        margin: 0 auto;
-        flex: 0 0 100%;
-        padding: 18vh 32vw;
+        margin-top: 3rem;
     }
 }
