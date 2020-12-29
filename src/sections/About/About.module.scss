@@ -1,3 +1,7 @@
+@import "../../styles/colors";
+
+$message-padding-vertical: 2em;
+
 .About {
     margin-bottom: 10rem;
     display: flex;
@@ -6,18 +10,30 @@
     padding: 0 0 40vw;
 
     .title {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     .text {
         margin-bottom: 2rem;
     }
 
+    .message {
+        background: $color-white;
+        color: $color-black;
+        padding: 1.5em $message-padding-vertical 3em;
+        border-radius: 0.75em;
+        position: relative;
+
+        .time {
+            position: absolute;
+            bottom: 1em;
+            right: $message-padding-vertical;
+            color: $color-purple-light;
+        }
+    }
+
     .imageContainer {
-        height: 40vw;
-        width: 40vw;
-        position: absolute;
-        right: 0;
-        bottom: 0;
+        width: 100%;
+        margin-bottom: 2em;
     }
 }
