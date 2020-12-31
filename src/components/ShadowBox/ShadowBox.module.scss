@@ -1,0 +1,25 @@
+@import "../../styles/colors";
+
+:export {
+    shadowColorLight: $color-pink;
+    shadowColorDark: $color-purple-dark;
+}
+
+.ShadowBox {
+    position: relative;
+
+    &:first-child {
+        z-index: 1;
+        position: relative;
+    }
+
+    .shadow {
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: .45em;
+        left: .45em;
+        border-radius: 15px;
+    }
+}
