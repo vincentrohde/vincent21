@@ -9,13 +9,28 @@ $image-card-height: 30vh;
     height: 100%;
     overflow: hidden;
 
+    &.isGradientOverlay {
+        &.isWhite {
+            .imageContainer {
+                &:before {
+                    background: $image-gradient-white;
+                }
+            }
+        }
+
+        .imageContainer {
+            &:before {
+                background: $image-gradient-black;
+            }
+        }
+    }
+
     &.isWhite {
         color: $color-black;
 
         .imageContainer {
             &:before {
-                background: rgba(255,255,255, 0.5);
-                background: $image-gradient-white;
+                background: rgba(255,255,255, 0.75);
             }
         }
     }
@@ -46,8 +61,7 @@ $image-card-height: 30vh;
             width: 100%;
             height: 100%;
             position: absolute;
-            background: rgba(0,0,0, 0.5);
-            background: $image-gradient-black;
+            background: rgba(0,0,0, 0.6);
             z-index: 1;
         }
 

@@ -31,23 +31,23 @@ const ProjectPreview = ({
     return (
         <div className={styles.ProjectPreview}>
             <div className={styles.cardContainer}>
-                <ImageCard src={src} title={title} isWhite={isWhite}>
+                <ImageCard src={src} title={title} isWhite={isWhite} isGradientOverlay>
                     <h3 className={styles.cardTitle}>{title}</h3>
                 </ImageCard>
             </div>
             <div className={styles.linksContainer}>
                 {more.length && (
-                    <Button style={'white'} isLink={true}>
+                    <Button style={'white'} isLink>
                         More
                     </Button>
                 )}
                 {live.length && (
-                    <Button style={'pink'} isLink={true}>
+                    <Button style={'pink'} isLink>
                         Live
                     </Button>
                 )}
                 {repo.length && (
-                    <Button style={'pink'} isLink={true}>
+                    <Button style={'pink'} isLink>
                         Source
                     </Button>
                 )}
