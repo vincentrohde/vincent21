@@ -2,6 +2,10 @@ import React, {ComponentProps} from 'react';
 import classNames from 'classnames';
 import styles from './ShadowBox.module.scss';
 
+// Custom components
+
+import Card from '../Cards/Card/Card';
+
 interface Props extends ComponentProps<any> {
     shadowColor?: string;
 }
@@ -25,7 +29,7 @@ const ShadowBox = ({shadowColor = 'dark', children, className}: Props) => {
     return (
         <div className={classNames(styles.ShadowBox, className)}>
             {children && children}
-            <div className={styles.shadow} style={style}></div>
+            <Card className={styles.shadow} style={style} />
         </div>
     );
 };
