@@ -6,6 +6,7 @@ import Title from '../../components/Typography/Title/Title';
 import Text from '../../components/Typography/Text/Text';
 import ProfilePicture from '../../components/ProfilePicture/ProfilePicture';
 import Link from '../../components/Typography/Link/Link';
+import Card from '../../components/Cards/Card/Card';
 
 const About = () => {
     return (
@@ -13,7 +14,7 @@ const About = () => {
             <div className={styles.imageContainer}>
                 <ProfilePicture />
             </div>
-            <div className={styles.message}>
+            <Card className={styles.message}>
                 <Title className={styles.title} level={2}>
                     Let me give you a short summary about myself :)
                 </Title>
@@ -27,7 +28,7 @@ const About = () => {
                 <Title className={styles.time} level={4}>
                     12:20
                 </Title>
-            </div>
+            </Card>
         </section>
     );
 };
