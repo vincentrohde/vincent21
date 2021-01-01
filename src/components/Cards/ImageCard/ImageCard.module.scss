@@ -6,7 +6,7 @@ $image-card-height: 30vh;
 .ImageCard {
     position: relative;
     color: $color-white;
-    height: $image-card-height;
+    height: 100%;
     overflow: hidden;
 
     &.isWhite {
@@ -20,17 +20,23 @@ $image-card-height: 30vh;
         }
     }
 
-    .imageTitle {
-        top: 1rem;
-        left: 1rem;
-        position: absolute;
+    .contentContainer {
+        position: relative;
         z-index: 2;
-        font-size: $title-level-one;
-        line-height: 1;
+    }
+
+    .absoluteContainer {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
     }
 
     .imageContainer {
         position: relative;
+        height: 100%;
+        width: 100%;
 
         &:before {
             content: "";
@@ -44,11 +50,9 @@ $image-card-height: 30vh;
             z-index: 1;
         }
 
-        img {
+        .image {
             width: 100%;
-            height: $image-card-height;
-            object-position: 50% 50%;
-            object-fit: cover;
+            height: 100%;
         }
     }
 }

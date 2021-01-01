@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ComponentProps} from 'react';
 import styles from './ImageCard.module.scss';
 import classnames from 'classnames';
 
@@ -7,20 +7,24 @@ import classnames from 'classnames';
 import Card from '../Card/Card';
 import ShadowBox from '../../ShadowBox/ShadowBox';
 
-interface Props {
+interface Props extends ComponentProps<any> {
     src: string;
-    alt?: string;
-    title?: string;
     isWhite?: boolean;
 }
 
-const ImageCard = ({src, alt = '', title, isWhite = false}: Props) => {
+const ImageCard = ({src, isWhite = false, children, className}: Props) => {
+    const imageStyle = {
+        background: `url(${src})`,
+        backgroundSize: 'cover',
+    };
     return (
         <ShadowBox shadowColor={isWhite ? 'light' : 'dark'}>
-            <Card className={classnames(styles.ImageCard, {[styles.isWhite]: isWhite})}>
-                {title && <h3 className={styles.imageTitle}>{title}</h3>}
-                <div className={styles.imageContainer}>
-                    <img src={src} alt={alt} />
+            <Card className={classnames(styles.ImageCard, {[styles.isWhite]: isWhite}, className)}>
+                <div className={styles.contentContainer}>{children && children}</div>
+                <div className={styles.absoluteContainer}>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.image} style={imageStyle} />
+                    </div>
                 </div>
             </Card>
         </ShadowBox>
