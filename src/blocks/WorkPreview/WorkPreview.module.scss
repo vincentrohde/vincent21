@@ -1,0 +1,20 @@
+.WorkPreview {
+    height: 50vh;
+    margin-bottom: 5rem;
+
+    .previewContainer {
+        text-align: center;
+        position: absolute;
+        padding: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .title, .description {
+            margin-bottom: 2rem;
+        }
+
+        .emoji {
+            line-height: 1;
+        }
+    }
+}
