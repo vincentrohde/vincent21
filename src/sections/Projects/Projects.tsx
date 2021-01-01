@@ -1,21 +1,21 @@
 import React from 'react';
-import styles from './Works.module.scss';
+import styles from './Projects.module.scss';
 
 // Custom blocks
-import WorkPreview from '../../blocks/WorkPreview/WorkPreview';
+import ProjectPreview from '../../blocks/ProjectPreview/ProjectPreview';
 
 // Custom components
 import Title from '../../components/Typography/Title/Title';
 
-const Works = () => {
+const Projects = () => {
     return (
-        <div className={styles.Works}>
+        <div className={styles.Projects}>
             <div className={styles.titleContainer}>
-                <Title level={2}>Recent Works</Title>
+                <Title level={2}>Projects</Title>
             </div>
 
             <div className={styles.contentContainer}>
-                <WorkPreview
+                <ProjectPreview
                     title={'Harvest Dashboard'}
                     src={'https://source.unsplash.com/300x200/?whale'}
                     text={
@@ -28,7 +28,7 @@ const Works = () => {
                     tags={['React', 'Node.js', 'Websockets', 'Node.js', 'Websockets', 'Node.js']}
                 />
 
-                <WorkPreview
+                <ProjectPreview
                     title={'Steelcase IoT Client'}
                     src={'https://source.unsplash.com/300x200/?robot'}
                     text={
@@ -45,4 +45,4 @@ const Works = () => {
     );
 };
 
-export default Works;
+export default Projects;

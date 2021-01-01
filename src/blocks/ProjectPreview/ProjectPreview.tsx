@@ -1,5 +1,5 @@
 import React, {ComponentProps} from 'react';
-import styles from './WorkPreview.module.scss';
+import styles from './ProjectPreview.module.scss';
 
 // Custom components
 import ImageCard from '../../components/Cards/ImageCard/ImageCard';
@@ -18,7 +18,7 @@ interface Props extends ComponentProps<any> {
     more?: string;
 }
 
-const WorkPreview = ({
+const ProjectPreview = ({
     title,
     text,
     src,
@@ -29,7 +29,7 @@ const WorkPreview = ({
     more = '',
 }: Props) => {
     return (
-        <div className={styles.WorkPreview}>
+        <div className={styles.ProjectPreview}>
             <div className={styles.cardContainer}>
                 <ImageCard src={src} title={title} isWhite={isWhite} />
             </div>
@@ -62,4 +62,4 @@ const WorkPreview = ({
     );
 };
 
-export default WorkPreview;
+export default ProjectPreview;
