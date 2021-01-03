@@ -8,11 +8,7 @@
 .ShadowBox {
     position: relative;
     height: 100%;
-
-    &:first-child {
-        z-index: 1;
-        position: relative;
-    }
+    z-index: 1;
 
     .shadow {
         z-index: -1;
