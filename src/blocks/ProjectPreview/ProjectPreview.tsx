@@ -31,7 +31,7 @@ const ProjectPreview = ({
     return (
         <div className={styles.ProjectPreview}>
             <div className={styles.cardContainer}>
-                <ImageCard src={src} title={title} isWhite={isWhite} isGradientOverlay>
+                <ImageCard src={src} title={title} isWhite={isWhite} isGradient>
                     <h3 className={styles.cardTitle}>{title}</h3>
                 </ImageCard>
             </div>

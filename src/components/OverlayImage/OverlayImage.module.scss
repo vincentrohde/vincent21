@@ -1,0 +1,43 @@
+@import "../../styles/colors";
+
+$image-overlay-white: rgba(255,255,255, 0.75);
+$image-overlay-black: rgba(0,0,0, 0.6);
+
+.OverlayImage {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &.isGradient {
+        &.isWhite {
+            .overlay {
+                background: $image-gradient-white;
+            }
+        }
+
+        .overlay {
+            background: $image-gradient-black;
+        }
+    }
+
+    &.isWhite {
+        .overlay {
+            background: $image-overlay-white;
+        }
+    }
+
+    .overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $image-overlay-black;
+        z-index: 1;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+}
