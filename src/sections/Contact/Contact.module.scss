@@ -1,38 +1,7 @@
 .Contact {
+    margin-bottom: 3rem;
+
     .titleContainer, .textContainer {
         margin-bottom: 2rem;
-    }
-
-    .mailContainer, .socialContainer {
-        margin-bottom: 3rem;
-    }
-
-    .subtitle {
-        margin-bottom: .5rem;
-    }
-
-    .addressContainer {
-        display: flex;
-        flex-wrap: wrap;
-
-        .email {
-            line-height: 2.5rem;
-            margin-right: 1.25rem;
-        }
-    }
-
-    .socialContainer {
-        .subtitle {
-            margin-bottom: 1.25rem;
-        }
-    }
-
-    .socialButtonContainer {
-        display: flex;
-        flex-wrap: wrap;
-
-        .socialButton {
-            margin-right: 1rem;
-        }
     }
 }
