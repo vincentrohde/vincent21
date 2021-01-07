@@ -13,6 +13,7 @@ const OverlayImage = ({src, isWhite = false, isGradient = false, overlay, classN
     const imageStyle = {
         background: `url(${src})`,
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
     };
 
     const overlayStyle = {
