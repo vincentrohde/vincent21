@@ -1,14 +1,5 @@
 @import "../Cards/Card/Card.module";
 
-.imageWrapper {
-    overflow: hidden;
-    border-radius: $card-border-radius;
-}
-
 .ProfilePicture {
     border-radius: $card-border-radius;
-
-    &.isZoom {
-        transform: scale(2.4) translateY(4%);
-    }
 }

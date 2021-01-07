@@ -31,6 +31,15 @@ $avatar-width: 24%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
+
+            .imageWrapper {
+                overflow: hidden;
+                border-radius: $card-border-radius;
+            }
+
+            .avatarImg {
+                transform: scale(2.4) translateY(4%);
+            }
         }
     }
 

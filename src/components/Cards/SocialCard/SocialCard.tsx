@@ -1,4 +1,4 @@
-import React, {ComponentProps} from 'react';
+import React, {ComponentProps, ReactNode} from 'react';
 import styles from './SocialCard.module.scss';
 import classnames from 'classnames';
 
@@ -9,6 +9,7 @@ import ProfilePicture from '../../ProfilePicture/ProfilePicture';
 import Title from '../../Typography/Title/Title';
 import Text from '../../Typography/Text/Text';
 import Button from '../../Button/Button';
+import ShadowBox from '../../ShadowBox/ShadowBox';
 
 type SocialLink = {
     name: string;
@@ -38,7 +39,11 @@ const SocialCard = ({name, image, location, mail, socials, className}: Props) =>
                     overlay={styles.imageOverlay}
                 />
                 <div className={styles.socialAvatar}>
-                    <ProfilePicture isShadow shadowColor={'#7D65E8'} isZoom />
+                    <ShadowBox shadowColor={'#7D65E8'}>
+                        <div className={styles.imageWrapper}>
+                            <ProfilePicture className={styles.avatarImg} />
+                        </div>
+                    </ShadowBox>
                 </div>
             </div>
             <div className={styles.content}>
