@@ -1,0 +1,72 @@
+@import "../../../styles/colors";
+@import "../Card/Card.module";
+
+$avatar-width: 24%;
+
+:export {
+    imageOverlay: linear-gradient(180deg, rgba(163, 147, 235, 0.75) 0%, rgba(242, 205, 250, 0.75) 100%);
+}
+
+
+.SocialCard {
+    height: 78vh;
+    background: $color-white;
+    color: $color-black;
+
+    .header {
+        position: relative;
+
+        .headerImage {
+            height: 25vh;
+
+            div, img {
+                border-radius: $card-border-radius $card-border-radius 0 0;
+            }
+        }
+
+        .socialAvatar {
+            width: $avatar-width;
+            position: absolute;
+            bottom: -($avatar-width * 0.9);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+
+    .content {
+        margin-top: 3rem;
+        padding: 0 1.5rem;
+
+        .center {
+            text-align: center;
+        }
+
+        .mailContainer, .socialContainer {
+            margin: 0 auto 2rem;
+        }
+
+        .addressContainer, .socialButtonContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .email {
+            line-height: 2.5rem;
+            margin-right: 1.25rem;
+        }
+
+        .subtitle {
+            margin-bottom: 1rem;
+        }
+
+        .socialButton {
+            margin-right: 1rem;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
