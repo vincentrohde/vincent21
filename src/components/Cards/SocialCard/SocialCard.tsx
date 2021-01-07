@@ -25,6 +25,10 @@ interface Props extends ComponentProps<any> {
 }
 
 const SocialCard = ({name, image, location, mail, socials, className}: Props) => {
+    const onClick = () => {
+        console.log('Works');
+    };
+
     return (
         <ShadowCard className={classnames(styles.SocialCard, className)} isWhite={true}>
             <div className={styles.header}>
@@ -50,13 +54,7 @@ const SocialCard = ({name, image, location, mail, socials, className}: Props) =>
                         </Title>
                         <div className={styles.addressContainer}>
                             <Text className={styles.email}>{mail}</Text>
-                            <Button
-                                isLink={false}
-                                style={'black'}
-                                clickHandler={() => {
-                                    console.log('tets');
-                                }}
-                            >
+                            <Button isLink={false} style={'black'} clickHandler={onClick}>
                                 Copy
                             </Button>
                         </div>
