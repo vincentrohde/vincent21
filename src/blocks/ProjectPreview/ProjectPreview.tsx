@@ -35,31 +35,35 @@ const ProjectPreview = ({
                     <h3 className={styles.cardTitle}>{title}</h3>
                 </ImageCard>
             </div>
-            <div className={styles.linksContainer}>
-                {more.length && (
-                    <Button style={'white'} isLink>
-                        More
-                    </Button>
-                )}
-                {live.length && (
-                    <Button style={'pink'} isLink>
-                        Live
-                    </Button>
-                )}
-                {repo.length && (
-                    <Button style={'pink'} isLink>
-                        Source
-                    </Button>
-                )}
-            </div>
-            <div className={styles.textContainer}>
-                <Text>{text}</Text>
-            </div>
-            {tags.length && (
-                <div className={styles.tagsContainer}>
-                    <Tags tags={tags} />
+            <div className={styles.descriptionContainer}>
+                <div className={styles.linksContainer}>
+                    {more.length && (
+                        <Button style={'white'} isLink>
+                            More
+                        </Button>
+                    )}
+                    {live.length && (
+                        <Button style={'pink'} isLink>
+                            Live
+                        </Button>
+                    )}
+                    {repo.length && (
+                        <Button style={'pink'} isLink>
+                            Source
+                        </Button>
+                    )}
                 </div>
-            )}
+                <div className={styles.contentContainer}>
+                    <div className={styles.textContainer}>
+                        <Text>{text}</Text>
+                    </div>
+                    {tags.length && (
+                        <div className={styles.tagsContainer}>
+                            <Tags tags={tags} />
+                        </div>
+                    )}
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,4 +1,7 @@
 @import "../../styles/typography";
+@import "../../styles/mixins/breakpoints";
+
+$card-title-padding-tablet: 2.5rem;
 
 .ProjectPreview {
     margin-bottom: 5rem;
@@ -8,6 +11,10 @@
         height: 30vh;
 
         .cardTitle {
+            @include view-between('small', 'large') {
+                padding: $card-title-padding-tablet;
+            }
+
             z-index: 2;
             font-size: $title-level-one;
             line-height: 1;
@@ -15,7 +22,25 @@
         }
     }
 
+    .descriptionContainer {
+        @include view-between('small', 'large') {
+            justify-content: space-between;
+            max-width: 35rem;
+            padding-left: $card-title-padding-tablet;
+        }
+
+        @include view-above('small') {
+            display: flex;
+        }
+    }
+
     .linksContainer {
+        @include view-between('small', 'large') {
+            order: 1;
+            flex: 0 0 25%;
+            display: block;
+        }
+
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 1.25rem;
@@ -25,7 +50,14 @@
         }
     }
 
-    .textContainer {
-        margin-bottom: 2rem;
+    .contentContainer {
+        @include view-between('small', 'large') {
+            order: 0;
+            flex: 0 0 60%;
+        }
+
+        .textContainer {
+            margin-bottom: 2rem;
+        }
     }
 }
