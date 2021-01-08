@@ -1,21 +1,36 @@
 @import "../../styles/colors";
 @import "../../styles/typography";
+@import "../../styles/mixins/breakpoints";
 
 :export { logoColor: $color-purple-light; }
 
 .Welcome {
+    @include view-between('small', 'large') {
+        margin-bottom: 6rem;
+    }
+
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 3em;
 
     .logoContainer {
+        @include view-between('small', 'large') {
+            width: 9vw;
+            margin: 0 auto 3em;
+            flex: 0 0 9vw;
+        }
+
         width: 15vw;
         margin: 0 auto 2em;
         flex: 0 0 15vw;
     }
 
     .heading {
+        @include view-below('medium') {
+            font-size: $title-level-two;
+        }
+
         color: $color-purple-light;
-        font-size: $title-level-two;
         line-height: 1.5;
 
         .isPink, .isWhite {
@@ -32,11 +47,15 @@
         }
 
         .isMobileOnly {
-            display: block;
+            @include view-below('medium') {
+                display: block;
+            }
+
+            display: none;
         }
     }
 
     .buttonContainer {
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 }

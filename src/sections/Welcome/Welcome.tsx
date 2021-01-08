@@ -13,8 +13,7 @@ const Welcome = () => {
                 <Logo fill={styles.logoColor} />
             </div>
             <Title level={1} className={styles.heading}>
-                Hey, I am
-                <br className={styles.isMobileOnly} />
+                Hey, I am <br className={styles.isMobileOnly} />
                 <span className={styles.isWhite}>Vincent Rohde.</span> A Berlin based{' '}
                 <span className={styles.isPink}>Web Developer</span> and sometimes{' '}
                 <span className={styles.isPink}>Designer.</span>
