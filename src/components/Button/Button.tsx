@@ -49,9 +49,16 @@ const Button = ({
 
     return (
         <a
-            className={classNames(styles.Button, theme, {[styles.isGhost]: isGhost}, className, {
-                ['shadow']: isShadow,
-            })}
+            className={classNames(
+                styles.Button,
+                theme,
+                {[styles.isGhost]: isGhost},
+                {[styles.isLink]: isLink},
+                className,
+                {
+                    ['shadow']: isShadow,
+                },
+            )}
             href={href ? href : undefined}
             onClick={isSyntheticLink ? onClick : undefined}
         >

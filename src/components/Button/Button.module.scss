@@ -1,4 +1,5 @@
 @import "../../styles/colors";
+@import "../../styles/mixins/breakpoints";
 
 :export {
     colorPink: $color-pink;
@@ -7,6 +8,7 @@
 }
 
 .Button {
+    position: relative;
     background: $color-pink;
     color: $color-black;
     display: flex;
@@ -39,6 +41,10 @@
         .arrowContainer path {
             stroke: $color-black;
         }
+    }
+
+    &.isLink {
+        padding: 0.75rem 2.25rem 0.75rem 1rem;
     }
 
     &.isGhost {
@@ -103,8 +109,10 @@
     }
 
     .arrowContainer {
-        margin-left: .5rem;
+        position: absolute;
+        right: 1rem;
         display: inline-block;
+        margin-left: .5rem;
 
         path {
             stroke: $color-black;
