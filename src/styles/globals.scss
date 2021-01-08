@@ -1,6 +1,7 @@
 @import "fonts";
 @import "colors";
 @import "variables";
+@import "./mixins/breakpoints";
 
 * {
     box-sizing: border-box;
@@ -21,6 +22,10 @@ a {
 }
 
 .app {
+    @include view-between('small', 'large') {
+        padding: $tablet-padding $tablet-padding 0;
+    }
+
     max-width: 50rem;
     margin: 0 auto;
     padding: 3.5rem $mobile-padding 0;

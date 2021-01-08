@@ -1,0 +1,39 @@
+$breakpoints: (
+    'small':  767px,
+    'medium': 768px,
+    'large':  1024px
+) !default;
+
+@mixin view-below($b) {
+    @if not map-has-key($breakpoints, $b) {
+        @error "No such breakpoint #{$b}.";
+    }
+
+    @media (max-width: #{map-get($breakpoints, $b) - 1px}) {
+        @content;
+    }
+}
+
+@mixin view-above($b) {
+    @if not map-has-key($breakpoints, $b) {
+        @error "No such breakpoint #{$b}.";
+    }
+
+    @media (min-width: #{map-get($breakpoints, $b) + 1px}) {
+        @content;
+    }
+}
+
+@mixin view-between($b1, $b2) {
+    @if not map-has-key($breakpoints, $b1) {
+        @error "No such breakpoint #{$b1}.";
+    }
+
+    @if not map-has-key($breakpoints, $b2) {
+        @error "No such breakpoint #{$b2}.";
+    }
+
+    @media (min-width: #{map-get($breakpoints, $b1) + 1px}) and (max-width: #{map-get($breakpoints, $b2)}) {
+        @content;
+    }
+}
