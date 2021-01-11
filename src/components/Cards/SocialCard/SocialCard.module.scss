@@ -1,4 +1,5 @@
 @import "../../../styles/colors";
+@import "../../../styles/mixins/breakpoints";
 @import "../Card/Card.module";
 
 $avatar-width: 24%;
@@ -9,6 +10,10 @@ $avatar-width: 24%;
 
 
 .SocialCard {
+    @include view-between('small', 'large') {
+        height: 68vh;
+    }
+
     height: 78vh;
     background: $color-white;
     color: $color-black;
@@ -32,6 +37,13 @@ $avatar-width: 24%;
             transform: translateX(-50%);
             z-index: 1;
 
+            .avatarShadow {
+                @include view-between('small', 'large') {
+                    top: 0.7rem;
+                    left: 0.55rem;
+                }
+            }
+
             .imageWrapper {
                 overflow: hidden;
                 border-radius: $card-border-radius;
@@ -44,6 +56,11 @@ $avatar-width: 24%;
     }
 
     .content {
+        @include view-between('small', 'large') {
+            margin-top: 6rem;
+            padding: 0 4.5rem;
+        }
+
         margin-top: 3rem;
         padding: 0 1.5rem;
 
@@ -53,6 +70,12 @@ $avatar-width: 24%;
 
         .mailContainer, .socialContainer {
             margin: 0 auto 2rem;
+        }
+
+        .mailContainer {
+            @include view-between('small', 'large') {
+                margin-top: 2rem;
+            }
         }
 
         .addressContainer, .socialButtonContainer {

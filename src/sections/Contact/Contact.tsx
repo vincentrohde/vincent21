@@ -20,24 +20,26 @@ const Contact = () => {
                 </Text>
             </div>
 
-            <SocialCard
-                name={'Vincent Rohde'}
-                image={'./backgrounds/mountain.jpg'}
-                location={'Berlin, Germany'}
-                mail={'mail@vincentroh.de'}
-                socials={[
-                    {
-                        name: 'Github',
-                        link: 'https://github.com/vincentrohde',
-                        icon: '/logos/github.svg',
-                    },
-                    {
-                        name: 'Twitter',
-                        link: 'https://twitter.com/vincentiscoding',
-                        icon: '/logos/twitter.svg',
-                    },
-                ]}
-            />
+            <div className={styles.contactInfo}>
+                <SocialCard
+                    name={'Vincent Rohde'}
+                    image={'./backgrounds/mountain.jpg'}
+                    location={'Berlin, Germany'}
+                    mail={'mail@vincentroh.de'}
+                    socials={[
+                        {
+                            name: 'Github',
+                            link: 'https://github.com/vincentrohde',
+                            icon: '/logos/github.svg',
+                        },
+                        {
+                            name: 'Twitter',
+                            link: 'https://twitter.com/vincentiscoding',
+                            icon: '/logos/twitter.svg',
+                        },
+                    ]}
+                />
+            </div>
         </section>
     );
 };

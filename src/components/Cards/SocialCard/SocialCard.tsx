@@ -39,7 +39,7 @@ const SocialCard = ({name, image, location, mail, socials, className}: Props) =>
                     overlay={styles.imageOverlay}
                 />
                 <div className={styles.socialAvatar}>
-                    <ShadowBox shadowColor={'#7D65E8'}>
+                    <ShadowBox shadowColor={'#7D65E8'} className={styles.avatarShadow}>
                         <div className={styles.imageWrapper}>
                             <ProfilePicture className={styles.avatarImg} />
                         </div>

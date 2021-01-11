@@ -27,9 +27,9 @@ const ShadowBox = ({shadowColor = 'dark', children, className}: Props) => {
     };
 
     return (
-        <div className={classNames(styles.ShadowBox, className)}>
+        <div className={styles.ShadowBox}>
             {children && children}
-            <Card className={styles.shadow} style={style} />
+            <Card className={classNames(styles.shadow, className)} style={style} />
         </div>
     );
 };

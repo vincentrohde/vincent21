@@ -1,7 +1,22 @@
+@import "../../styles/mixins/breakpoints";
+
 .Contact {
     margin-bottom: 3rem;
 
     .titleContainer, .textContainer {
         margin-bottom: 2rem;
+    }
+
+    .textContainer {
+        @include view-between('small', 'large') {
+            width: 60%;
+        }
+    }
+
+    .contactInfo {
+        @include view-between('small', 'large') {
+            width: 70%;
+            margin: 3rem auto 0;
+        }
     }
 }
