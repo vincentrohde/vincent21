@@ -12,7 +12,7 @@
     z-index: 1;
 
     .shadow {
-        @include view-between('small', 'large') {
+        @include view('medium') {
             top: 1rem;
             left: .9rem;
         }

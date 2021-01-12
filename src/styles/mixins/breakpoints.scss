@@ -4,6 +4,17 @@ $breakpoints: (
     'large':  1024px
 ) !default;
 
+@mixin view($b) {
+    @if not map-has-key($breakpoints, $b) {
+        @error "No such breakpoint #{$b}.";
+    }
+
+    @media (min-width: #{map-get($breakpoints, $b)}) {
+        @content;
+    }
+}
+
+
 @mixin view-below($b) {
     @if not map-has-key($breakpoints, $b) {
         @error "No such breakpoint #{$b}.";
@@ -33,7 +44,7 @@ $breakpoints: (
         @error "No such breakpoint #{$b2}.";
     }
 
-    @media (min-width: #{map-get($breakpoints, $b1) + 1px}) and (max-width: #{map-get($breakpoints, $b2)}) {
+    @media (min-width: #{map-get($breakpoints, $b1) + 1px}) and (max-width: #{map-get($breakpoints, $b2) - 1px}) {
         @content;
     }
 }
