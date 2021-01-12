@@ -1,4 +1,5 @@
 @import "../../styles/colors";
+@import "../../styles/mixins/breakpoints";
 
 $message-padding-vertical: 2em;
 
@@ -18,6 +19,10 @@ $message-padding-vertical: 2em;
     }
 
     .message {
+        @include view-between('small', 'large') {
+            flex: 0 0 60%;
+        }
+
         background: $color-white;
         color: $color-black;
         padding: 1.5em $message-padding-vertical 3em;
