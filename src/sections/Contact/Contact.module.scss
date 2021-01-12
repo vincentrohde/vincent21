@@ -16,7 +16,7 @@
     .contactInfo {
         @include view-between('small', 'large') {
             width: 70%;
-            margin: 3rem auto 0;
+            margin: 3rem auto 5rem;
         }
     }
 }

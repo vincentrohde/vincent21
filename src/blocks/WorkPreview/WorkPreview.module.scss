@@ -4,6 +4,7 @@
 .WorkPreview {
     @include view-between('small', 'large') {
         height: 40vh;
+        margin-bottom: 10rem;
     }
 
     height: 50vh;
