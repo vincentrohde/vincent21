@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Projects.module.scss';
 
 // Custom blocks
 import ProjectPreview from '../../blocks/ProjectPreview/ProjectPreview';
@@ -9,12 +8,12 @@ import Title from '../../components/Typography/Title/Title';
 
 const Projects = () => {
     return (
-        <div className={styles.Projects}>
-            <div className={styles.titleContainer}>
+        <div>
+            <div className={'sectionTitle'}>
                 <Title level={2}>Projects</Title>
             </div>
 
-            <div className={styles.contentContainer}>
+            <div>
                 <ProjectPreview
                     title={'Harvest Dashboard'}
                     src={'https://source.unsplash.com/300x200/?whale'}

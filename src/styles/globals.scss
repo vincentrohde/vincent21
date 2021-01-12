@@ -29,6 +29,14 @@ a {
     max-width: 50rem;
     margin: 0 auto;
     padding: 3.5rem $mobile-padding 0;
+
+    .sectionTitle {
+        @include view-between('small', 'large') {
+            margin-bottom: 4rem;
+        }
+
+        margin-bottom: 3rem;
+    }
 }
 
 .shadow {
