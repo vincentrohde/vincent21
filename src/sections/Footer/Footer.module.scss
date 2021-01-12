@@ -1,8 +1,14 @@
 @import "../../styles/colors";
 @import "../../styles/typography";
 @import "../../styles/variables";
+@import "../../styles/mixins/breakpoints";
 
 .Footer {
+    @include view-between('small', 'large') {
+        margin: 0 (-1 * $tablet-padding);
+        padding: (.5 * $tablet-padding) $tablet-padding;
+    }
+
     background: $color-purple-dark;
     color: $color-gray;
     margin: 0 (-1 * $mobile-padding);
