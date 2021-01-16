@@ -8,11 +8,38 @@ $card-title-padding-tablet: 2.5rem;
         margin-bottom: 12rem;
     }
 
+    @include view('large') {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 6rem;
+    }
+
     margin-bottom: 5rem;
+
+    &:nth-of-type(even) {
+        .cardContainer {
+            @include view('large') {
+                order: 2;
+            }
+        }
+
+        .descriptionContainer {
+            @include view('large') {
+                order: 1;
+            }
+        }
+    }
 
     .cardContainer {
         @include view-between('small', 'large') {
             height: 35vh;
+        }
+
+        @include view('large') {
+            flex: 0 0 50%;
+            height: 25vh;
         }
 
         margin-bottom: 3rem;
@@ -21,6 +48,10 @@ $card-title-padding-tablet: 2.5rem;
         .cardTitle {
             @include view-between('small', 'large') {
                 padding: $card-title-padding-tablet;
+            }
+
+            @include view('large') {
+                padding: $card-title-padding-tablet / 1.5;
             }
 
             z-index: 2;
@@ -38,6 +69,14 @@ $card-title-padding-tablet: 2.5rem;
             margin-top: 4.5rem;
         }
 
+        @include view('large') {
+            flex: 0 0 40%;
+            margin-top: 0;
+            flex-wrap: wrap;
+            justify-content: unset;
+            align-items: flex-start;
+        }
+
         @include view-above('small') {
             display: flex;
         }
@@ -48,6 +87,11 @@ $card-title-padding-tablet: 2.5rem;
             order: 1;
             flex: 0 0 25%;
             display: block;
+        }
+
+        @include view('large') {
+            flex: 0 0 100%;
+            height: auto;
         }
 
         display: flex;

@@ -35,7 +35,7 @@ a {
     padding: 3.5rem $mobile-padding 0;
 
     .sectionTitle {
-        @include view-between('small', 'large') {
+        @include view('medium') {
             margin-bottom: 4rem;
         }
 
