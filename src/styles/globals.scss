@@ -16,6 +16,10 @@ body {
     color: $color-white;
 }
 
+body {
+    position: relative;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -27,12 +31,13 @@ a {
     }
 
     @include view('large') {
-        padding: 6rem 0;
+        padding: 6rem 0 0;
     }
 
-    max-width: 50rem;
+    max-width: $app-width;
     margin: 0 auto;
     padding: 3.5rem $mobile-padding 0;
+    height: 100%;
 
     .sectionTitle {
         @include view('medium') {

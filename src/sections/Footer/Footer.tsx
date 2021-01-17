@@ -7,7 +7,9 @@ import Title from '../../components/Typography/Title/Title';
 const Footer = () => {
     return (
         <footer className={styles.Footer}>
-            <Title level={4}>© Vincent Rohde, 2020</Title>
+            <div className={styles.contentContainer}>
+                <Title level={4}>© Vincent Rohde, 2020</Title>
+            </div>
         </footer>
     );
 };

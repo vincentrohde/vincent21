@@ -4,13 +4,21 @@
 @import "../../styles/mixins/breakpoints";
 
 .Footer {
-    @include view-between('small', 'large') {
-        margin: 0 (-1 * $tablet-padding);
+    @include view('medium') {
         padding: (.5 * $tablet-padding) $tablet-padding;
     }
 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
     background: $color-purple-dark;
     color: $color-gray;
-    margin: 0 (-1 * $mobile-padding);
+    margin: 0;
     padding: (.75 * $mobile-padding) $mobile-padding;
+
+    .contentContainer {
+        max-width: $app-width;
+        margin: 0 auto;
+    }
 }
