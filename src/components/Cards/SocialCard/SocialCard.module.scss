@@ -10,8 +10,12 @@ $avatar-width: 24%;
 
 
 .SocialCard {
-    @include view-between('small', 'large') {
+    @include view('medium') {
         height: 68vh;
+    }
+
+    @include view('large') {
+        height: 55vh;
     }
 
     height: 78vh;
@@ -22,6 +26,10 @@ $avatar-width: 24%;
         position: relative;
 
         .headerImage {
+            @include view('large') {
+                height: 18vh;
+            }
+
             height: 25vh;
 
             div, img {
@@ -38,7 +46,7 @@ $avatar-width: 24%;
             z-index: 1;
 
             .avatarShadow {
-                @include view-between('small', 'large') {
+                @include view('medium') {
                     top: 0.7rem;
                     left: 0.55rem;
                 }
@@ -56,9 +64,13 @@ $avatar-width: 24%;
     }
 
     .content {
-        @include view-between('small', 'large') {
+        @include view('medium') {
             margin-top: 6rem;
             padding: 0 4.5rem;
+        }
+
+        @include view('large') {
+            padding: 0 3.5rem;
         }
 
         margin-top: 3rem;
@@ -73,7 +85,7 @@ $avatar-width: 24%;
         }
 
         .mailContainer {
-            @include view-between('small', 'large') {
+            @include view('medium') {
                 margin-top: 2rem;
             }
         }

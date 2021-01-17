@@ -1,7 +1,26 @@
 @import "../../styles/mixins/breakpoints";
 
 .Contact {
+    @include view('large') {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 3rem;
+    }
+
     margin-bottom: 3rem;
+
+    .head {
+        @include view('large') {
+            order: 2;
+            flex: 0 0 40%;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
 
     .titleContainer, .textContainer {
         margin-bottom: 2rem;
@@ -11,12 +30,20 @@
         @include view-between('small', 'large') {
             width: 60%;
         }
+
+        @include view('large') {
+            margin-bottom: 0;
+        }
     }
 
     .contactInfo {
         @include view-between('small', 'large') {
             width: 70%;
             margin: 3rem auto 5rem;
+        }
+
+        @include view('large') {
+            order: 1;
         }
     }
 }

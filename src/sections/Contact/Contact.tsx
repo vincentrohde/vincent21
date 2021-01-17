@@ -9,15 +9,17 @@ import SocialCard from '../../components/Cards/SocialCard/SocialCard';
 const Contact = () => {
     return (
         <section className={styles.Contact}>
-            <div className={styles.titleContainer}>
-                <Title level={2}>Let&apos;s work together</Title>
-            </div>
+            <div className={styles.head}>
+                <div className={styles.titleContainer}>
+                    <Title level={2}>Let&apos;s work together</Title>
+                </div>
 
-            <div className={styles.textContainer}>
-                <Text>
-                    By default, JSX doesn&apos;t let you render raw HTML from string values.
-                    However, there is a way to make it do that
-                </Text>
+                <div className={styles.textContainer}>
+                    <Text>
+                        By default, JSX doesn&apos;t let you render raw HTML from string values.
+                        However, there is a way to make it do that
+                    </Text>
+                </div>
             </div>
 
             <div className={styles.contactInfo}>
