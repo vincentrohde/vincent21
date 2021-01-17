@@ -21,7 +21,6 @@ const Contact = () => {
                     </Text>
                 </div>
             </div>
-
             <div className={styles.contactInfo}>
                 <SocialCard
                     name={'Vincent Rohde'}

@@ -1,6 +1,10 @@
 @import "../../styles/mixins/breakpoints";
 
 .Contact {
+    @include view('medium') {
+        margin-bottom: 10rem;
+    }
+
     @include view('large') {
         display: flex;
         justify-content: space-between;
@@ -8,7 +12,7 @@
         padding-bottom: 3rem;
     }
 
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 
     .head {
         @include view('large') {
