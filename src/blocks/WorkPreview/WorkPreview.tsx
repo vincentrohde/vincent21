@@ -1,5 +1,6 @@
-import React, {ReactNode} from 'react';
+import React, {ReactNode, ComponentProps} from 'react';
 import styles from './WorkPreview.module.scss';
+import classNames from 'classnames';
 
 // Custom components
 import ImageCard from '../../components/Cards/ImageCard/ImageCard';
@@ -14,14 +15,14 @@ type PreviewData = {
     isWhite?: boolean;
 };
 
-interface Props {
+interface Props extends ComponentProps<any> {
     data: PreviewData;
 }
 
-const WorkPreview = ({data}: Props) => {
+const WorkPreview = ({data, className}: Props) => {
     const {title, src, description, emoji, isWhite = false} = data;
     return (
-        <div className={styles.WorkPreview}>
+        <div className={classNames(styles.WorkPreview, className)}>
             <ImageCard src={src} isWhite={isWhite}>
                 <div className={styles.previewContainer}>
                     {title && (

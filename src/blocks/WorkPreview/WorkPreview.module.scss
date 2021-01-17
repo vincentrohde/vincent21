@@ -7,15 +7,25 @@
         margin-bottom: 10rem;
     }
 
+    @include view('large') {
+        height: 35vh;
+    }
+
+    width: 100%;
     height: 50vh;
     margin-bottom: 5rem;
 
     .previewContainer {
-        @include view-between('small', 'large') {
+        @include view('medium') {
             width: 30rem;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+
+        @include view('large') {
+            width: 22rem;
+            padding: 0;
         }
 
         text-align: center;
@@ -25,21 +35,17 @@
         transform: translateY(-50%);
 
         .title, .description {
-            @include view-between('small', 'large') {
-                margin-bottom: 3.5rem;
-            }
-
             margin-bottom: 2rem;
         }
 
         .title {
-            @include view-between('small', 'large') {
-                font-size: $title-level-one;
+            @include view('medium') {
+                font-size: $title-level-two;
             }
         }
 
         .description {
-            @include view-between('small', 'large') {
+            @include view('medium') {
                 text-align: center;
             }
         }
