@@ -9,6 +9,10 @@
         margin-bottom: 6rem;
     }
 
+    @include view('large') {
+        position: relative;
+    }
+
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 3em;
@@ -20,6 +24,13 @@
             flex: 0 0 9vw;
         }
 
+        @include view('large') {
+            margin: 0 5% 0 0;
+            width: 5%;
+            flex: 0 0 5%;
+            padding-top: 1rem;
+        }
+
         width: 15vw;
         margin: 0 auto 2em;
         flex: 0 0 15vw;
@@ -28,6 +39,10 @@
     .heading {
         @include view-below('medium') {
             font-size: $title-level-two;
+        }
+
+        @include view('large') {
+            flex: 0 0 80%;
         }
 
         color: $color-purple-light;
@@ -56,6 +71,13 @@
     }
 
     .buttonContainer {
+        @include view('large') {
+            position: absolute;
+            bottom: -10rem;
+            left: 0;
+            z-index: 1;
+        }
+
         margin-top: 2rem;
     }
 }
