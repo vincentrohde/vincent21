@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './About.module.scss';
+import classNames from 'classnames';
 
 // Custom components
 import Title from '../../components/Typography/Title/Title';
@@ -11,7 +12,7 @@ import Card from '../../components/Cards/Card/Card';
 const About = () => {
     return (
         <section className={styles.About}>
-            <div className={styles.imageContainer}>
+            <div className={classNames(styles.imageContainer, styles.isTop)}>
                 <ProfilePicture />
             </div>
             <Card className={styles.message}>
