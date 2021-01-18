@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Projects.module.scss';
 
 // Custom blocks
 import ProjectPreview from '../../blocks/ProjectPreview/ProjectPreview';
@@ -8,7 +9,7 @@ import Title from '../../components/Typography/Title/Title';
 
 const Projects = () => {
     return (
-        <div>
+        <section className={styles.Projects}>
             <div className={'sectionTitle'}>
                 <Title level={2}>Projects</Title>
             </div>
@@ -40,7 +41,7 @@ const Projects = () => {
                     tags={['React', 'Node.js', 'Websockets']}
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

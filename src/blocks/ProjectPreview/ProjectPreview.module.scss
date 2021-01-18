@@ -5,7 +5,7 @@ $card-title-padding-tablet: 2.5rem;
 
 .ProjectPreview {
     @include view-between('small', 'large') {
-        margin-bottom: 12rem;
+        margin-bottom: 10rem;
     }
 
     @include view('large') {
