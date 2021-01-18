@@ -34,16 +34,16 @@ $card-title-padding-tablet: 2.5rem;
 
     .cardContainer {
         @include view-between('small', 'large') {
-            height: 35vh;
+            height: 22rem;
         }
 
         @include view('large') {
             flex: 0 0 50%;
-            height: 25vh;
+            height: 18rem;
         }
 
         margin-bottom: 3rem;
-        height: 30vh;
+        height: 14rem;
 
         .cardTitle {
             @include view-between('small', 'large') {
