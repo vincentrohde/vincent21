@@ -25,6 +25,11 @@ a {
     text-decoration: none;
 }
 
+.app-wrapper {
+    width: 100vw;
+    overflow: hidden;
+}
+
 .app {
     @include view-between('small', 'large') {
         padding: $tablet-padding $tablet-padding 0;

@@ -18,11 +18,7 @@ $avatar-width: 24%;
         position: relative;
 
         .headerImage {
-            @include view('large') {
-                height: 18vh;
-            }
-
-            height: 25vh;
+            height: 14rem;
 
             div, img {
                 border-radius: $card-border-radius $card-border-radius 0 0;
