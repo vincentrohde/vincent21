@@ -6,5 +6,9 @@ $card-border-radius: 1rem;
     display: block;
     border-radius: 1rem;
     width: 100%;
-    height: auto;
+    height: 100%;
+
+    &.isDynamicHeight {
+        height: auto;
+    }
 }
