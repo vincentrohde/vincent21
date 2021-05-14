@@ -15,6 +15,25 @@ $message-padding-vertical: 2em;
     position: relative;
     padding: 0 0 40vw;
 
+    &.isSideways {
+        .imageContainer {
+            @include view('large') {
+                transition: .75s;
+                left: 35%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .message {
+            opacity: 1;
+        }
+    }
+
+    .imageContainer {
+        transition: 1s;
+    }
+
     .title {
         margin-bottom: 2rem;
     }
@@ -26,6 +45,7 @@ $message-padding-vertical: 2em;
     .message {
         @include view-between('small', 'large') {
             flex: 0 0 60%;
+            opacity: 0;
         }
 
         @include view('large') {
@@ -34,12 +54,14 @@ $message-padding-vertical: 2em;
             width: 40%;
             top: 50%;
             transform: translateY(-50%);
+            opacity: 0;
         }
 
         background: $color-white;
         color: $color-black;
         padding: 1.5em $message-padding-vertical 3em;
         position: relative;
+        transition: .5s ease-in;
 
         .time {
             position: absolute;
@@ -52,16 +74,10 @@ $message-padding-vertical: 2em;
     .imageContainer {
         @include view('large') {
             position: absolute;
-            left: 35%;
             width: 80%;
-            top: 50%;
-            transform: translateY(-50%);
-
-            &.isTop {
-                left: 50%;
-                top: 0;
-                transform: translateX(-50%);
-            }
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
         }
 
         width: 100%;
