@@ -9,10 +9,6 @@ $card-title-padding-tablet: 2.5rem;
     }
 
     @include view('large') {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
         margin-bottom: 6rem;
     }
 
@@ -29,6 +25,15 @@ $card-title-padding-tablet: 2.5rem;
             @include view('large') {
                 order: 1;
             }
+        }
+    }
+
+    .content {
+        @include view('large') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
         }
     }
 

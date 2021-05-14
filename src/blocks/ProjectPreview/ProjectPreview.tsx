@@ -6,6 +6,7 @@ import ImageCard from '../../components/Cards/ImageCard/ImageCard';
 import Button from '../../components/Button/Button';
 import Text from '../../components/Typography/Text/Text';
 import Tags from '../../components/Tags/Tags';
+import ScrollItem from '../../components/ScrollItem/ScrollItem';
 
 interface Props extends ComponentProps<any> {
     title: string;
@@ -30,40 +31,44 @@ const ProjectPreview = ({
 }: Props) => {
     return (
         <div className={styles.ProjectPreview}>
-            <div className={styles.cardContainer}>
-                <ImageCard src={src} title={title} isWhite={isWhite} isGradient>
-                    <h3 className={styles.cardTitle}>{title}</h3>
-                </ImageCard>
-            </div>
-            <div className={styles.descriptionContainer}>
-                <div className={styles.linksContainer}>
-                    {more.length && (
-                        <Button style={'white'} isLink>
-                            More
-                        </Button>
-                    )}
-                    {live.length && (
-                        <Button style={'pink'} isLink>
-                            Live
-                        </Button>
-                    )}
-                    {repo.length && (
-                        <Button style={'pink'} isLink>
-                            Source
-                        </Button>
-                    )}
-                </div>
-                <div className={styles.contentContainer}>
-                    <div className={styles.textContainer}>
-                        <Text>{text}</Text>
+            <ScrollItem>
+                <div className={styles.content}>
+                    <div className={styles.cardContainer}>
+                        <ImageCard src={src} title={title} isWhite={isWhite} isGradient>
+                            <h3 className={styles.cardTitle}>{title}</h3>
+                        </ImageCard>
                     </div>
-                    {tags.length && (
-                        <div className={styles.tagsContainer}>
-                            <Tags tags={tags} />
+                    <div className={styles.descriptionContainer}>
+                        <div className={styles.linksContainer}>
+                            {more.length && (
+                                <Button href={more} style={'white'} isLink>
+                                    More
+                                </Button>
+                            )}
+                            {live.length && (
+                                <Button href={live} style={'pink'} isLink>
+                                    Live
+                                </Button>
+                            )}
+                            {repo.length && (
+                                <Button href={repo} style={'pink'} isLink>
+                                    Source
+                                </Button>
+                            )}
                         </div>
-                    )}
+                        <div className={styles.contentContainer}>
+                            <div className={styles.textContainer}>
+                                <Text>{text}</Text>
+                            </div>
+                            {tags.length && (
+                                <div className={styles.tagsContainer}>
+                                    <Tags tags={tags} />
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </ScrollItem>
         </div>
     );
 };
