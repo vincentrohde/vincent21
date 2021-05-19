@@ -1,0 +1,17 @@
+@import "../../styles/mixins/breakpoints";
+
+.Work {
+    margin-bottom: 12rem;
+
+    .previewContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .isHalf {
+            @include view('large') {
+                flex: 0 0 47%;
+            }
+        }
+    }
+}
