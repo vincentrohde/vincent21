@@ -12,8 +12,8 @@ import Card from '../../components/Cards/Card/Card';
 
 const About = () => {
     const ref = useRef<HTMLElement>(null);
-    const date = new Date();
-    const time = date.toLocaleTimeString();
+    // const date = new Date();
+    // const time = date.toLocaleTimeString();
     const [isSideways, setIsSideways] = useState(false);
 
     const profilePictureAnimation = (newVisibillity: string, isScrollingDown: boolean) => {
@@ -41,15 +41,15 @@ const About = () => {
                     Let me give you a short summary about myself :)
                 </Title>
                 <Text className={styles.text}>
-                    Folly words widow one downs few age every seven. If miss part by fact he park
-                    just shew. Discovered had get considered projection who favourable. Necessary up
-                    knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use
-                    off agreeable law unwilling sir deficient curiosity instantly.
+                    I love to design and develop digital &apos;things&apos;. In high school I
+                    learned coding and started to develop a passion for (digital) design. Today I
+                    work as <b>Junior Developer</b> for Endava. On the side, I develop web
+                    applications either as <b>freelance</b> or <b>open-source projects</b>.
                 </Text>
                 <Link color={'black'}>My Resume</Link>
-                <Title className={styles.time} level={4}>
-                    {time}
-                </Title>
+                {/*<Title className={styles.time} level={4}>*/}
+                {/*    {time}*/}
+                {/*</Title>*/}
             </Card>
         </section>
     );

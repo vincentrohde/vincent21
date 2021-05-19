@@ -17,28 +17,28 @@ const Projects = () => {
             <div>
                 <ProjectPreview
                     title={'Harvest Dashboard'}
-                    src={'https://source.unsplash.com/300x200/?whale'}
+                    src={'https://source.unsplash.com/600x400/?clock'}
                     text={
-                        'CSS Modules locally scope CSS by automatically creating a unique class name. This allows you to use the same CSS class name in different files without worrying about collisions.'
+                        'The Harvest Dashboard (third-party client) aims to improve the user experience when tracking time with Harvest. This is accomplished by simplifying the interface, while also adding visualisation of data.'
                     }
                     isWhite={false}
                     live={'#'}
-                    repo={'#'}
+                    repo={'https://github.com/vincentrohde/harvest-dashboard'}
                     more={'#'}
-                    tags={['React', 'Node.js', 'Websockets', 'Node.js', 'Websockets', 'Node.js']}
+                    tags={['React', 'Redux', 'Docker', 'Typescript', 'Rest API']}
                 />
 
                 <ProjectPreview
-                    title={'Steelcase IoT Client'}
-                    src={'https://source.unsplash.com/300x200/?robot'}
+                    title={'Bachelor Thesis'}
+                    src={'https://source.unsplash.com/600x400/?school'}
                     text={
-                        'CSS Modules locally scope CSS by automatically creating a unique class name. This allows you to use the same CSS class name in different files without worrying about collisions.'
+                        "Educational plattform, that returns tailor-made content based on the student's learning profile and recommends new content on observed preferences."
                     }
                     isWhite={true}
                     live={'#'}
-                    repo={'#'}
+                    repo={'https://github.com/vincentrohde/bachelor'}
                     more={'#'}
-                    tags={['React', 'Node.js', 'Websockets']}
+                    tags={['Node.js', 'Apostrophe CMS', 'MongoDB', 'Docker']}
                 />
             </div>
         </section>

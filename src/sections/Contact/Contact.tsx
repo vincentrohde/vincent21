@@ -9,7 +9,7 @@ import ScrollItem from '../../components/ScrollItem/ScrollItem';
 
 const Contact = () => {
     return (
-        <section className={styles.Contact}>
+        <section className={styles.Contact} id={'contact'}>
             <div className={styles.head}>
                 <ScrollItem>
                     <div className={styles.titleContainer}>
@@ -18,8 +18,9 @@ const Contact = () => {
 
                     <div className={styles.textContainer}>
                         <Text>
-                            By default, JSX doesn&apos;t let you render raw HTML from string values.
-                            However, there is a way to make it do that
+                            I am always looking for opportunities to broaden my horizon. If you are
+                            in the business of web development, let’s work together and build the
+                            page that changes the internet!
                         </Text>
                     </div>
                 </ScrollItem>
