@@ -19,7 +19,9 @@ const Welcome = () => {
                 <span className={styles.isPink}>Designer.</span>
             </Title>
             <div className={styles.buttonContainer}>
-                <Button style={'pink'}>Contact me</Button>
+                <Button href={'#contact'} style={'pink'}>
+                    Contact me
+                </Button>
             </div>
         </div>
     );

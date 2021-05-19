@@ -18,6 +18,10 @@ $avatar-width: 24%;
         position: relative;
 
         .headerImage {
+            @include view-below('medium') {
+                height: 10rem;
+            }
+
             height: 14rem;
 
             div, img {
