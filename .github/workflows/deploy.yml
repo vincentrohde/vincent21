@@ -24,14 +24,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: npm ci
-      - run: npm run build
+        - run: npm ci
+        - run: npm run build
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_KEY }}
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
       - name: Adding Known Hosts
-          run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+        - run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: Deploy with rsync
-        run: rsync -avz -n ./out/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/test/out
+        - run: rsync -avz -n ./out/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/test/out
