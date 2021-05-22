@@ -33,12 +33,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-# fonts
-public/fonts
-
-# images
-public/works
-public/backgrounds
-
 # jetbrains
 .idea
