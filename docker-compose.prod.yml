@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  portfolio:
+    networks:
+      - nginx.docker
+networks:
+  nginx.docker:
+    name: nginx.docker
+    external: true
