@@ -38,7 +38,16 @@ jobs:
       - name: Deploy with rsync
         run: |
           rsync -avz ./out/ ./nginx.conf ./docker-compose.yml ./docker-compose.prod.yml ./Makefile ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_LOCATION }}
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
-          cd ~/..${{ secrets.SSH_LOCATION }}
-          make down
-          make prod
+#          cd ~/..${{ secrets.SSH_LOCATION }}
+#          make down
+#          make prod
+      - name: Restarting Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            whoami
+            ls -al
