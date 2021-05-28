@@ -39,14 +39,14 @@ jobs:
         run: |
           rsync -avz ./out/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_LOCATION }}/out
           rsync -avz ./nginx.conf ./docker-compose.yml ./docker-compose.prod.yml ./Makefile ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_LOCATION }}
-#      - name: Restarting Server
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{ secrets.SSH_HOST }}
-#          username: ${{ secrets.SSH_USER }}
-#          key: ${{ secrets.SSH_KEY }}
-#          port: ${{ secrets.SSH_PORT }}
-#          script: |
-#            cd ~/..${{ secrets.SSH_LOCATION }}
-#            make down
-#            make prod
+      - name: Restarting Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd ~/..${{ secrets.SSH_LOCATION }}
+            make down
+            make prod
