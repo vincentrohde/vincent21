@@ -40,5 +40,6 @@ jobs:
           rsync -avz ./out/ ./nginx.conf ./docker-compose.yml ./docker-compose.prod.yml ./Makefile ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_LOCATION }}
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
           cd .${{ secrets.SSH_LOCATION }}
+          ls
           make down
           make prod
