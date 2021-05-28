@@ -46,5 +46,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            cd ~/..${{ secrets.SSH_LOCATION }}
             make down
             make prod
