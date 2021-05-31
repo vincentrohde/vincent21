@@ -26,7 +26,7 @@ const Contact = () => {
             <div className={styles.contactInfo}>
                 <SocialCard
                     name={'Vincent Rohde'}
-                    image={'./backgrounds/mountain.jpg'}
+                    image={'./backgrounds/mountain.png'}
                     location={'Berlin, Germany'}
                     mail={'mail@vincentroh.de'}
                     socials={[
