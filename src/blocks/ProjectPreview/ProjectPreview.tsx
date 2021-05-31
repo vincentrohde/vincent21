@@ -40,17 +40,17 @@ const ProjectPreview = ({
                     </div>
                     <div className={styles.descriptionContainer}>
                         <div className={styles.linksContainer}>
-                            {more.length && (
+                            {more.length > 0 && (
                                 <Button href={more} style={'white'} isLink>
                                     More
                                 </Button>
                             )}
-                            {live.length && (
+                            {live.length > 0 && (
                                 <Button href={live} style={'pink'} isLink>
                                     Live
                                 </Button>
                             )}
-                            {repo.length && (
+                            {repo.length > 0 && (
                                 <Button href={repo} style={'pink'} isLink>
                                     Source
                                 </Button>
@@ -60,7 +60,7 @@ const ProjectPreview = ({
                             <div className={styles.textContainer}>
                                 <Text>{text}</Text>
                             </div>
-                            {tags.length && (
+                            {tags.length > 0 && (
                                 <div className={styles.tagsContainer}>
                                     <Tags tags={tags} />
                                 </div>
