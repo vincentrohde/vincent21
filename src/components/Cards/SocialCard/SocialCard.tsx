@@ -61,9 +61,9 @@ const SocialCard = ({name, image, location, mail, socials, className}: Props) =>
                             </Title>
                             <div className={styles.addressContainer}>
                                 <Text className={styles.email}>{mail}</Text>
-                                <Button isLink={false} style={'black'} clickHandler={onClick}>
-                                    Copy
-                                </Button>
+                                {/*<Button isLink={false} style={'black'} clickHandler={onClick}>*/}
+                                {/*    Copy*/}
+                                {/*</Button>*/}
                             </div>
                         </div>
                     )}

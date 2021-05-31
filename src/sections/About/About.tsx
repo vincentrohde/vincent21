@@ -46,7 +46,7 @@ const About = () => {
                     work as <b>Junior Developer</b> for Endava. On the side, I develop web
                     applications either as <b>freelance</b> or <b>open-source projects</b>.
                 </Text>
-                <Link color={'black'}>My Resume</Link>
+                <Link color={'black'} href={'/cv.pdf'}>My Resume</Link>
                 {/*<Title className={styles.time} level={4}>*/}
                 {/*    {time}*/}
                 {/*</Title>*/}
