@@ -9,13 +9,14 @@ interface Props extends ComponentProps<any> {
     color?: string;
 }
 
-const Link = ({color = 'pink', className, children}: Props) => (
+const Link = ({color = 'pink', className, href = '', children}: Props) => (
     <Button
         className={classnames(styles.Link, className)}
         style={color}
         isGhost={true}
         isLink={true}
         isShadow={false}
+        href={href}
     >
         {children}
     </Button>
