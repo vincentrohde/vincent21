@@ -17,7 +17,7 @@ const Projects = () => {
             <div>
                 <ProjectPreview
                     title={'Harvest Dashboard'}
-                    src={'https://source.unsplash.com/600x400/?clock'}
+                    src={'/projects/clock.png'}
                     text={
                         'The Harvest Dashboard (third-party client) aims to improve the user experience when tracking time with Harvest. This is accomplished by simplifying the interface, while also adding visualisation of data.'
                     }
@@ -28,7 +28,7 @@ const Projects = () => {
 
                 <ProjectPreview
                     title={'Bachelor Thesis'}
-                    src={'https://source.unsplash.com/600x400/?school'}
+                    src={'/projects/school.png'}
                     text={
                         "Educational plattform, that returns tailor-made content based on the student's learning profile and recommends new content on observed preferences."
                     }
