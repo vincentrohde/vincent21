@@ -33,7 +33,6 @@ const Projects = () => {
                         "Educational plattform, that returns tailor-made content based on the student's learning profile and recommends new content on observed preferences."
                     }
                     isWhite={true}
-                    live={'/bachelor'}
                     repo={'https://github.com/vincentrohde/bachelor'}
                     tags={['Node.js', 'Apostrophe CMS', 'MongoDB', 'Docker']}
                 />
