@@ -16,6 +16,18 @@ const Projects = () => {
 
             <div>
                 <ProjectPreview
+                    title={'AERA Berlin'}
+                    src={'/projects/aera.png'}
+                    text={
+                        'Portfolio page to promote a Berlin office building to potential investors.'
+                    }
+                    isWhite={false}
+                    live={'https://aera.berlin/'}
+                    more={'https://www.bauwens.de/projects/aera-berlin'}
+                    tags={['React', 'Next.js', 'Typescript']}
+                />
+
+                <ProjectPreview
                     title={'Harvest Dashboard'}
                     src={'/projects/clock.png'}
                     text={
