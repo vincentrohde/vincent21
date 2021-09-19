@@ -1,0 +1,5 @@
+version: '3.7'
+services:
+  portfolio:
+    image: portfolio
+    container_name: portfolio
