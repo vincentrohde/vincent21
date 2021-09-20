@@ -45,7 +45,7 @@ http://localhost:3000
 
 ## Features
 
-#### Cards
+### Cards
 
 A lot of times content is displayed using cards. The basic ``Card`` component is used for almost anything on the page.
 
