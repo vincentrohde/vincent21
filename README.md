@@ -1,30 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Harvest Dashboard
 
-## Getting Started
+[![Deployment](https://github.com/vincentrohde/harvest-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/vincentrohde/vincent21/actions/workflows/deploy.yml)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fvincentroh.de%2F)
 
-First, run the development server:
 
-```bash
+The 2021 version of my personal portfolio page. Built with Next.js and Typescript 🚀
+
+## Contents
+
+1. [Installation](#installation)
+2. [Features](#features)
+    1. [Cards](#cards)
+    2. [Blocks](#blocks)
+    3. [Sections](#sections)
+
+## Installation
+
+Clone repository
+
+```
+git clone https://github.com/vincentrohde/vincent21.git
+cd ./vincent21
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Now that you have everything in place you can start the project.
+
+```
 npm run dev
 # or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project will be available via
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+#### Cards
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A lot of times content is displayed using cards. The basic ``Card`` component is used for almost anything on the page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+There are also more complex versions of the base, like the ``ShadowCard`` component, which extends the base with a ``ShadowBox`` component. It is used for every card that has a shadow behind the content.
 
-## Deploy on Vercel
+![](./assets/socialcard.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+_Desktop View of a ``SocialCard``. With some text next to it. It extends from the ``ShadowCard`` and includes an ``OverlayImage`` at the top._
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Blocks
+
+Blocks represent a reusable collection of multiple components, that are always put together in the same way. An example would be the ``ProjectPreview`` block that is used to preview a project. Blocks are used in lists (ex. previewing multiple projects).
+
+![](./assets/block.png)
+
+_Desktop View of a ``ProjectPreview`` block. It includes an ``ImageCard``, up to 3 ``Button`` components, a ``Text`` and finally ``Tags``._
+
+### Sections
+
+The page is divided in unique sections, such as the  ``Work`` section. They then act as a static templates, that uses blocks and components to display the information provided to them.
+
+![](./assets/section.png)
+
+_Desktop View of the ``Work`` section, with a group of ``WorkPreview`` blocks._
