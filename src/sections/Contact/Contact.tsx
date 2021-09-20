@@ -18,7 +18,8 @@ const Contact = () => {
 
                     <div className={styles.textContainer}>
                         <Text>
-                            I am always looking for opportunities to broaden my horizon. Let's work together and build something amazing.
+                            I am always looking for opportunities to broaden my horizon. Let&apos;s
+                            work together and build something amazing.
                         </Text>
                     </div>
                 </ScrollItem>
