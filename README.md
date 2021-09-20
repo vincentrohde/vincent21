@@ -1,6 +1,7 @@
 # vincent21
 
 [![Deployment](https://github.com/vincentrohde/harvest-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/vincentrohde/vincent21/actions/workflows/deploy.yml)
+[![ESLint](https://github.com/vincentrohde/vincent21/actions/workflows/eslint.yml/badge.svg)](https://github.com/vincentrohde/vincent21/actions/workflows/eslint.yml)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fvincentroh.de%2F)
 
 The 2021 version of my personal portfolio page. Built with Next.js and Typescript 🚀
