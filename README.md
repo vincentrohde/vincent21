@@ -3,7 +3,6 @@
 [![Deployment](https://github.com/vincentrohde/harvest-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/vincentrohde/vincent21/actions/workflows/deploy.yml)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fvincentroh.de%2F)
 
-
 The 2021 version of my personal portfolio page. Built with Next.js and Typescript 🚀
 
 ## Contents
@@ -53,7 +52,7 @@ There are also more complex versions of the base, like the ``ShadowCard`` compon
 
 ![](./assets/socialcard.png)
 
-_Desktop View of a ``SocialCard``. With some text next to it. It extends from the ``ShadowCard`` and includes an ``OverlayImage`` at the top._
+_Desktop View of a ``SocialCard`` with some text next to it. It extends from the ``ShadowCard`` and includes an ``OverlayImage`` at the top._
 
 ### Blocks
 
@@ -65,7 +64,7 @@ _Desktop View of a ``ProjectPreview`` block. It includes an ``ImageCard``, up to
 
 ### Sections
 
-The page is divided in unique sections, such as the  ``Work`` section. They then act as a static templates, that uses blocks and components to display the information provided to them.
+The page is divided into unique sections, such as the  ``Work`` section. They then act as static templates, that use blocks and components to display the information provided to them.
 
 ![](./assets/section.png)
 
