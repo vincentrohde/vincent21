@@ -1,5 +1,5 @@
 prod\:install:
-	@docker-compose -f docker/docker-compose.yml -f docker/docker-compose.prod.yml build --no-cache
+	@docker-compose -f docker/docker-compose.yml -f docker/docker-compose.prod.yml build
 prod\:up:
 	@docker-compose -f docker/docker-compose.yml -f docker/docker-compose.prod.yml up -d
 prod\:down:

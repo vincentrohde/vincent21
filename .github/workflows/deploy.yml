@@ -36,6 +36,5 @@ jobs:
           script: |
             cd ~/..${{ secrets.SSH_LOCATION }}
             make prod:down
-            make prod:uninstall
             make prod:install
             make prod:up
