@@ -25,7 +25,7 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: Deploy with rsync
         run: |
-          rsync -avz . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_LOCATION }}
+          rsync -avz ./config ./docker ./public ./src ./declarations.d.ts ./Makefile ./next-env.d.ts ./package*.json ./tsconfig.json ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_LOCATION }}
       - name: Restarting Server
         uses: appleboy/ssh-action@master
         with:
