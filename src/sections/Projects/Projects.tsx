@@ -34,9 +34,8 @@ const Projects = () => {
                         'The Harvest Dashboard (third-party client) aims to improve the user experience when tracking time with Harvest. This is accomplished by simplifying the interface, while also adding visualisation of data.'
                     }
                     isWhite={false}
-                    more={'https://github.com/vincentrohde/harvest-dashboard'}
                     repo={'https://github.com/vincentrohde/harvest-dashboard'}
-                    live={'https://vincentroh.de/dashboard'}
+                    live={'https://harvest-dashboard.pages.dev/'}
                     tags={['React', 'Redux', 'Docker', 'Typescript', 'Rest API']}
                 />
 
