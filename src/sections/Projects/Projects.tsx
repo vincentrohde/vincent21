@@ -16,12 +16,21 @@ const Projects = () => {
 
             <div>
                 <ProjectPreview
+                    title={'Alfred Toepfer Stiftung'}
+                    src={'/projects/toepfer.png'}
+                    text={
+                        'The Alfred-Toepfer-Stiftung is a German foundation, which was established in 1931. Its goal is to promote unification and understanding among the different cultures and countries in Europe.'
+                    }
+                    live={'https://www.toepfer-stiftung.de/'}
+                    tags={['React', 'Next.js', 'Typescript', 'Storybook']}
+                />
+
+                <ProjectPreview
                     title={'AERA Berlin'}
                     src={'/projects/aera.png'}
                     text={
                         'Portfolio page to promote a Berlin office building to potential investors.'
                     }
-                    isWhite={false}
                     live={'https://aera.berlin/'}
                     more={'https://www.bauwens.de/projects/aera-berlin'}
                     tags={['React', 'Next.js', 'Typescript']}
@@ -33,22 +42,10 @@ const Projects = () => {
                     text={
                         'The Harvest Dashboard (third-party client) aims to improve the user experience when tracking time with Harvest. This is accomplished by simplifying the interface, while also adding visualisation of data.'
                     }
-                    isWhite={false}
                     repo={'https://github.com/vincentrohde/harvest-dashboard'}
                     live={'https://harvest-dashboard.pages.dev/'}
                     tags={['React', 'Redux', 'Docker', 'Typescript', 'Rest API']}
                 />
-
-                {/*<ProjectPreview*/}
-                {/*    title={'Bachelor Thesis'}*/}
-                {/*    src={'/projects/school.png'}*/}
-                {/*    text={*/}
-                {/*        "Educational plattform, that returns tailor-made content based on the student's learning profile and recommends new content on observed preferences."*/}
-                {/*    }*/}
-                {/*    isWhite={true}*/}
-                {/*    repo={'https://github.com/vincentrohde/bachelor'}*/}
-                {/*    tags={['Node.js', 'Apostrophe CMS', 'MongoDB', 'Docker']}*/}
-                {/*/>*/}
             </div>
         </section>
     );
