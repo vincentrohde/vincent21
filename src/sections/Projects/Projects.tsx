@@ -16,6 +16,17 @@ const Projects = () => {
 
             <div>
                 <ProjectPreview
+                    title={'Double Pages'}
+                    more={'https://www.metapaper.io/projekte/double-pages/'}
+                    src={'/projects/double-pages.png'}
+                    text={
+                        'The Double Pages project is an open and ongoing project, by the Düsseldorf agency Open Studio. The goal is to display opposites and similarities.'
+                    }
+                    live={'https://www.doublepages.de/'}
+                    tags={['React', 'Next.js', 'Typescript', 'Storybook', 'GraphQL']}
+                />
+
+                <ProjectPreview
                     title={'Alfred Toepfer Stiftung'}
                     src={'/projects/toepfer.png'}
                     text={
