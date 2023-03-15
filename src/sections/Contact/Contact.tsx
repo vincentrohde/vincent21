@@ -18,9 +18,8 @@ const Contact = () => {
 
                     <div className={styles.textContainer}>
                         <Text>
-                            I am always looking for opportunities to broaden my horizon. If you are
-                            in the business of web development, let’s work together and build the
-                            page that changes the internet!
+                            I am always looking for opportunities to broaden my horizon. Let&apos;s
+                            work together and build something amazing.
                         </Text>
                     </div>
                 </ScrollItem>

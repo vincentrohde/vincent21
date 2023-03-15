@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  portfolio:
+    build:
+      context: ../.
+      dockerfile: docker/portfolio/Dockerfile.prod
+    environment:
+      - NODE_ENV=production
+    networks:
+      - nginx.docker
+networks:
+  nginx.docker:
+    name: nginx.docker
+    external: true

@@ -11,7 +11,7 @@ interface Props extends ComponentProps<any> {
 
 const OverlayImage = ({src, isWhite = false, isGradient = false, overlay, className}: Props) => {
     const imageStyle = {
-        background: `url(${src})`,
+        background: `url(${src}) center`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     };

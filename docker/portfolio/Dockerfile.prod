@@ -1,0 +1,16 @@
+# Building client
+FROM node:14-alpine as build-service
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci
+
+COPY . ./
+
+RUN npm run build
+
+# Starting harvest-app
+FROM nginx:latest as portfolio
+COPY --from=build-service /app/out /var/www/html
+ADD /config/nginx/nginx.prod.conf /etc/nginx/nginx.conf

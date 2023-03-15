@@ -16,29 +16,46 @@ const Projects = () => {
 
             <div>
                 <ProjectPreview
-                    title={'Harvest Dashboard'}
-                    src={'https://source.unsplash.com/600x400/?clock'}
+                    title={'Double Pages'}
+                    more={'https://www.metapaper.io/projekte/double-pages/'}
+                    src={'/projects/double-pages.png'}
                     text={
-                        'The Harvest Dashboard (third-party client) aims to improve the user experience when tracking time with Harvest. This is accomplished by simplifying the interface, while also adding visualisation of data.'
+                        'The Double Pages project is an open and ongoing project, by the Düsseldorf agency Open Studio. The goal is to display opposites and similarities.'
                     }
-                    isWhite={false}
-                    live={'#'}
-                    repo={'https://github.com/vincentrohde/harvest-dashboard'}
-                    more={'#'}
-                    tags={['React', 'Redux', 'Docker', 'Typescript', 'Rest API']}
+                    live={'https://www.doublepages.de/'}
+                    tags={['React', 'Next.js', 'Typescript', 'Storybook', 'GraphQL']}
                 />
 
                 <ProjectPreview
-                    title={'Bachelor Thesis'}
-                    src={'https://source.unsplash.com/600x400/?school'}
+                    title={'Alfred Toepfer Stiftung'}
+                    src={'/projects/toepfer.png'}
                     text={
-                        "Educational plattform, that returns tailor-made content based on the student's learning profile and recommends new content on observed preferences."
+                        'The Alfred-Toepfer-Stiftung is a German foundation, which was established in 1931. Its goal is to promote unification and understanding among the different cultures and countries in Europe.'
                     }
-                    isWhite={true}
-                    live={'#'}
-                    repo={'https://github.com/vincentrohde/bachelor'}
-                    more={'#'}
-                    tags={['Node.js', 'Apostrophe CMS', 'MongoDB', 'Docker']}
+                    live={'https://www.toepfer-stiftung.de/'}
+                    tags={['React', 'Next.js', 'Typescript', 'Storybook']}
+                />
+
+                <ProjectPreview
+                    title={'AERA Berlin'}
+                    src={'/projects/aera.png'}
+                    text={
+                        'Portfolio page to promote a Berlin office building to potential investors.'
+                    }
+                    live={'https://aera.berlin/'}
+                    more={'https://www.bauwens.de/projects/aera-berlin'}
+                    tags={['React', 'Next.js', 'Typescript']}
+                />
+
+                <ProjectPreview
+                    title={'Harvest Dashboard'}
+                    src={'/projects/clock.png'}
+                    text={
+                        'The Harvest Dashboard (third-party client) aims to improve the user experience when tracking time with Harvest. This is accomplished by simplifying the interface, while also adding visualisation of data.'
+                    }
+                    repo={'https://github.com/vincentrohde/harvest-dashboard'}
+                    live={'https://harvest-dashboard.pages.dev/'}
+                    tags={['React', 'Redux', 'Docker', 'Typescript', 'Rest API']}
                 />
             </div>
         </section>
