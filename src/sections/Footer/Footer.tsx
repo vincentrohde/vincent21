@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className={styles.Footer}>
             <div className={styles.contentContainer}>
-                <Title level={4}>© Vincent Rohde, twenty-21</Title>
+                <Title level={4}>© Vincent Rohde, twenty-23</Title>
             </div>
         </footer>
     );

@@ -18,7 +18,7 @@ const Projects = () => {
                 <ProjectPreview
                     title={'Double Pages'}
                     more={'https://www.metapaper.io/projekte/double-pages/'}
-                    src={'/projects/double-pages.png'}
+                    src={'/projects/double-pages.webp'}
                     text={
                         'The Double Pages project is an open and ongoing project, by the Düsseldorf agency Open Studio. The goal is to display opposites and similarities.'
                     }
@@ -28,7 +28,7 @@ const Projects = () => {
 
                 <ProjectPreview
                     title={'Alfred Toepfer Stiftung'}
-                    src={'/projects/toepfer.png'}
+                    src={'/projects/toepfer.webp'}
                     text={
                         'The Alfred-Toepfer-Stiftung is a German foundation, which was established in 1931. Its goal is to promote unification and understanding among the different cultures and countries in Europe.'
                     }
@@ -38,7 +38,7 @@ const Projects = () => {
 
                 <ProjectPreview
                     title={'AERA Berlin'}
-                    src={'/projects/aera.png'}
+                    src={'/projects/aera.webp'}
                     text={
                         'Portfolio page to promote a Berlin office building to potential investors.'
                     }
@@ -49,7 +49,7 @@ const Projects = () => {
 
                 <ProjectPreview
                     title={'Harvest Dashboard'}
-                    src={'/projects/clock.png'}
+                    src={'/projects/clock.webp'}
                     text={
                         'The Harvest Dashboard (third-party client) aims to improve the user experience when tracking time with Harvest. This is accomplished by simplifying the interface, while also adding visualisation of data.'
                     }
